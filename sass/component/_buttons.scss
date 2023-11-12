@@ -1,0 +1,17 @@
+@use "../abstract/variables" as variables;
+@use "../abstract/mixins" as mixins;
+
+.btn-cta {
+  &:link,
+  &:visited {
+    padding: 2rem 5rem;
+    border-radius: 35px;
+
+    text-decoration: none;
+    font-size: 2.25rem;
+    font-weight: 700;
+
+    color: white;
+    background-color: variables.$cyan;
+  }
+}

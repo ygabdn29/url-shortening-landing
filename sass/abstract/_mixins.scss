@@ -1,0 +1,13 @@
+@use "sass:math";
+$desktop: 1440px;
+
+// calculating font size
+@function calc-font-size($px) {
+  @return percentage(calc($px / 16));
+}
+
+@mixin responsive($breakpoint) {
+  @media (min-width: calc(($breakpoint / 16px) * 1em)) {
+    @content;
+  }
+}

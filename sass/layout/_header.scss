@@ -1,0 +1,95 @@
+@use "../abstract/variables" as variables;
+@use "../abstract/mixins" as mixins;
+
+.header {
+  display: flex;
+  padding: 3rem 2rem;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+
+  &__logo {
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    padding: 3rem;
+    margin: 0 auto;
+
+    position: absolute;
+    top: 90%;
+    left: 0;
+    right: 0;
+    width: 80%;
+    background-color: variables.$darker-blue;
+
+    font-weight: 700;
+    font-size: 2rem;
+
+    border-radius: 10px;
+    transition: 0.3s all ease-in;
+
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+
+    &-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    &-item {
+    }
+
+    &-link:link,
+    &-link:visited {
+      text-decoration: none;
+      color: white;
+    }
+
+    &--active {
+      opacity: 1;
+      pointer-events: auto;
+      visibility: visible;
+    }
+  }
+
+  &__menu {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    &-btn {
+      font-size: 4rem;
+      color: variables.$gray;
+    }
+  }
+
+  &__break {
+    border-top: 1px solid rgba(255, 255, 255, 0.01);
+    width: 100%;
+  }
+
+  &__btn {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: white;
+    }
+
+    &--sign-up {
+      border-radius: 25px;
+      padding: 1rem;
+      width: 100%;
+      text-align: center;
+      background-color: variables.$cyan;
+    }
+  }
+}

@@ -1,0 +1,134 @@
+@use "../abstract/variables" as variables;
+@use "../abstract/mixins" as mixins;
+
+.hero {
+  margin-bottom: 3rem;
+  &__container {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column-reverse;
+  }
+
+  &__description {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  &__text-description {
+    font-size: 2.25rem;
+    text-align: center;
+    color: variables.$grayish-violet;
+  }
+
+  &__illustration-container {
+    align-self: flex-end;
+    overflow: hidden;
+  }
+
+  &__illustration {
+    margin-right: -18rem;
+    max-width: 60rem;
+  }
+}
+
+.shortly-form {
+  &__container {
+    padding: 2rem;
+  }
+
+  &__input-form {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-radius: 10px;
+
+    background-color: variables.$dark-violet;
+  }
+
+  &__url-input {
+    padding: 2rem 1.5rem;
+    font-size: 2.25rem;
+    font-weight: 700;
+    border-radius: 5px;
+    border: none;
+
+    &::placeholder {
+      color: variables.$grayish-violet;
+    }
+  }
+
+  &__submit-btn {
+    padding: 2rem 1.5rem;
+    font-size: 2.25rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+
+    background-color: variables.$cyan;
+    color: white;
+  }
+}
+
+.feature {
+  &__container {
+    padding: 5rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7rem;
+
+    background-color: rgba(157, 153, 166, 0.2);
+  }
+
+  &__header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__text {
+    font-size: 2.25rem;
+    color: variables.$grayish-violet;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+  }
+
+  &__text-box {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    padding: 3rem;
+    background-color: white;
+  }
+
+  &__illustration {
+  }
+
+  &__description-text {
+    font-size: 2rem;
+    color: variables.$grayish-violet;
+    text-align: center;
+  }
+}
+
+.cta {
+  background-color: variables.$dark-violet;
+  padding: 10rem 3rem;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+}

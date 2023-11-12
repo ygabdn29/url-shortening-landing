@@ -1,0 +1,25 @@
+@use "../abstract/variables" as variables;
+@use "../abstract/mixins" as mixins;
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 50%;
+
+  @include mixins.responsive(mixins.$desktop) {
+    font-size: mixins.calc-font-size(10);
+  }
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: variables.$darker-blue;
+}
