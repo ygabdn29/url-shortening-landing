@@ -5,16 +5,30 @@
   padding: 5rem 3rem;
   background-color: variables.$darker-violet;
 
+  @include mixins.responsive(mixins.$desktop) {
+    padding: 6.4rem 10.4rem;
+  }
+
   &__container {
     display: grid;
     justify-content: center;
     row-gap: 5rem;
+
+    @include mixins.responsive(mixins.$desktop) {
+      grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+      column-gap: 2rem;
+    }
   }
 
   &__logo-container {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include mixins.responsive(mixins.$desktop) {
+      align-items: start;
+      justify-content: left;
+    }
   }
 
   &__logo {
@@ -26,6 +40,10 @@
     flex-direction: column;
     gap: 3rem;
     text-align: center;
+
+    @include mixins.responsive(mixins.$desktop) {
+      text-align: left;
+    }
   }
 
   &__menu-title {
@@ -33,6 +51,11 @@
     font-size: 2.25rem;
     color: white;
     text-align: center;
+
+    @include mixins.responsive(mixins.$desktop) {
+      font-size: 1.8rem;
+      text-align: left;
+    }
   }
 
   &__menu-list {
@@ -53,6 +76,7 @@
       font-size: 2.25rem;
       text-decoration: none;
       color: variables.$gray;
+      font-size: 1.8rem;
     }
   }
 
@@ -73,6 +97,10 @@
       font-size: 4rem;
       color: white;
       cursor: pointer;
+
+      @include mixins.responsive(mixins.$desktop) {
+        font-size: 3.2rem;
+      }
     }
   }
 }

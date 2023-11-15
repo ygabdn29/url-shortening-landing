@@ -2,41 +2,89 @@
 @use "../abstract/mixins" as mixins;
 
 .hero {
-  margin-bottom: 3rem;
+  padding-bottom: 20rem;
+  position: relative;
+
+  @include mixins.responsive(mixins.$desktop) {
+    padding: 5rem 0 15rem 10.4rem;
+  }
+
   &__container {
     display: flex;
     gap: 2rem;
     flex-direction: column-reverse;
+
+    @include mixins.responsive(mixins.$desktop) {
+      flex-direction: row;
+      gap: 2.4rem;
+    }
   }
 
   &__description {
-    padding: 2rem;
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    padding: 2rem;
     align-items: center;
+
+    @include mixins.responsive(mixins.$desktop) {
+      flex: 0 1 55%;
+      gap: 1.2rem;
+      padding: 0;
+      align-items: start;
+      justify-content: center;
+    }
   }
 
   &__text-description {
     font-size: 2.25rem;
     text-align: center;
     color: variables.$grayish-violet;
+
+    @include mixins.responsive(mixins.$desktop) {
+      text-align: left;
+      font-size: 2.4rem;
+      padding-right: 4.8em;
+      margin-top: -1.2rem;
+      margin-bottom: 2.4rem;
+    }
   }
 
   &__illustration-container {
     align-self: flex-end;
     overflow: hidden;
+
+    @include mixins.responsive(mixins.$desktop) {
+      flex: 0 1 45%;
+    }
   }
 
   &__illustration {
     margin-right: -18rem;
     max-width: 60rem;
+
+    @include mixins.responsive(mixins.$desktop) {
+      max-width: 200rem;
+    }
   }
 }
 
 .shortly-form {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -12%;
+  margin: 0 auto;
+
+  @include mixins.responsive(mixins.$desktop) {
+  }
+
   &__container {
     padding: 2rem;
+
+    @include mixins.responsive(mixins.$desktop) {
+      padding: 0 10.4rem;
+    }
   }
 
   &__input-form {
@@ -47,6 +95,11 @@
     border-radius: 10px;
 
     background-color: variables.$dark-violet;
+
+    @include mixins.responsive(mixins.$desktop) {
+      flex-direction: row;
+      padding: 4.8rem 6.4rem;
+    }
   }
 
   &__url-input {
@@ -59,6 +112,11 @@
     &::placeholder {
       color: variables.$grayish-violet;
     }
+
+    @include mixins.responsive(mixins.$desktop) {
+      flex: 0 1 80%;
+      border-radius: 10px;
+    }
   }
 
   &__submit-btn {
@@ -70,18 +128,111 @@
 
     background-color: variables.$cyan;
     color: white;
+
+    @include mixins.responsive(mixins.$desktop) {
+      flex: 0 1 20%;
+      border-radius: 10px;
+    }
+  }
+}
+
+.shorten-url {
+  padding: 15rem 2rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  background-color: rgba(157, 153, 166, 0.2);
+
+  @include mixins.responsive(mixins.$desktop) {
+    padding: 15rem 10.4rem 0 10.4rem;
+  }
+
+  &__container {
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0.5rem 1rem 0.5rem rgba(157, 153, 166, 0.2);
+
+    @include mixins.responsive(mixins.$desktop) {
+      padding: 1.2rem 2.4rem;
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &__container:last-child {
+    margin-bottom: -15rem;
+  }
+
+  &__url-text {
+    padding: 1.5rem;
+    font-size: 2rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    &--shorten {
+      color: variables.$cyan;
+      text-align: right;
+    }
+
+    @include mixins.responsive(mixins.$desktop) {
+      font-size: 1.8rem;
+      flex: 0 1 45%;
+    }
+  }
+
+  &__break {
+    border-top: 1px solid rgba(110, 110, 110, 0.2);
+
+    @include mixins.responsive(mixins.$desktop) {
+      display: none;
+    }
+  }
+
+  &__btn-container {
+    padding: 0 1.5rem 2rem 1.5rem;
+
+    @include mixins.responsive(mixins.$desktop) {
+      padding: 0;
+      flex: 0 1 10%;
+    }
+  }
+
+  &__copy-url-btn {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 1.5rem;
+    font-size: 2.25rem;
+    font-weight: 700;
+    background-color: variables.$cyan;
+    color: white;
+
+    @include mixins.responsive(mixins.$desktop) {
+      padding: 1.2rem 3.6rem;
+
+      font-size: 1.8rem;
+    }
+  }
+
+  &--hidden {
+    display: none;
   }
 }
 
 .feature {
+  padding-top: 15rem;
+  background-color: rgba(157, 153, 166, 0.2);
+
   &__container {
     padding: 5rem 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 7rem;
-
-    background-color: rgba(157, 153, 166, 0.2);
   }
 
   &__header {
@@ -100,6 +251,10 @@
     display: flex;
     flex-direction: column;
     gap: 10rem;
+
+    @include mixins.responsive(mixins.$desktop) {
+      flex-direction: row;
+    }
   }
 
   &__text-box {
@@ -109,6 +264,12 @@
     align-items: center;
     padding: 3rem;
     background-color: white;
+  }
+
+  &__illustration-container {
+    border-radius: 50%;
+    padding: 3rem;
+    background-color: variables.$dark-violet;
   }
 
   &__illustration {

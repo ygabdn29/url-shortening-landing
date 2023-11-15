@@ -56,8 +56,10 @@
 
           <hr class="header__break" />
 
-          <a href="" class="header__btn">Login</a>
-          <a href="" class="header__btn header__btn--sign-up">Sign Up</a>
+          <div class="header__btn-container">
+            <a href="" class="header__btn">Login</a>
+            <a href="" class="header__btn header__btn--sign-up">Sign Up</a>
+          </div>
         </nav>
 
         <button class="header__menu">
@@ -87,23 +89,25 @@
             />
           </div>
         </div>
+
+        <div class="shortly-form">
+          <div class="shortly-form__container">
+            <form action="" class="shortly-form__input-form">
+              <input
+                type="url"
+                name="url-input"
+                id="url-input"
+                class="shortly-form__url-input"
+                placeholder="Shorten a link here..."
+              />
+
+              <button class="shortly-form__submit-btn">Shorten It!</button>
+            </form>
+          </div>
+        </div>
       </section>
 
-      <div class="shortly-form">
-        <div class="shortly-form__container">
-          <form action="" class="shortly-form__input-form">
-            <input
-              type="url"
-              name="url-input"
-              id="url-input"
-              class="shortly-form__url-input"
-              placeholder="Shorten a link here..."
-            />
-
-            <button class="shortly-form__submit-btn">Shorten It!</button>
-          </form>
-        </div>
-      </div>
+      <section class="shorten-url shorten-url--hidden"></section>
 
       <section class="feature">
         <div class="feature__container">
@@ -118,7 +122,13 @@
 
           <div class="feature__description">
             <div class="feature__text-box">
-              <img src="" alt="" class="feature__illustration" />
+              <div class="feature__illustration-container">
+                <img
+                  src="./images/icon-brand-recognition.svg"
+                  alt="Feature Illustration"
+                  class="feature__illustration"
+                />
+              </div>
 
               <h3 class="heading-tertiary">Brand Recognition</h3>
 
@@ -130,7 +140,13 @@
             </div>
 
             <div class="feature__text-box">
-              <img src="" alt="" class="feature__illustration" />
+              <div class="feature__illustration-container">
+                <img
+                  src="./images/icon-detailed-records.svg"
+                  alt="Feature illustration"
+                  class="feature__illustration"
+                />
+              </div>
 
               <h3 class="heading-tertiary">Detailed Records</h3>
 
@@ -142,7 +158,13 @@
             </div>
 
             <div class="feature__text-box">
-              <img src="" alt="" class="feature__illustration" />
+              <div class="feature__illustration-container">
+                <img
+                  src="./images/icon-fully-customizable.svg"
+                  alt="Feature Illustration"
+                  class="feature__illustration"
+                />
+              </div>
 
               <h3 class="heading-tertiary">Fully Customizable</h3>
 
