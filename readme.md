@@ -10,11 +10,9 @@ This is a solution to the [Shortly URL shortening API Challenge challenge on Fro
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -40,7 +38,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: (https://github.com/ygabdn29/url-shortening-landing)
-- Live Site URL: ()
+- Live Site URL: (https://ygabdn29.github.io/url-shortening-landing/)
 
 ## My process
 
@@ -52,9 +50,11 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 
-### What I learned
-
 ### Continued development
+
+- I can't seem to integrate the API into the app, so I'm using a placeholder url that has been shortened. In the maybe I can try to integrate it.
+- I think the way I handle adding shortened link to the page and how I handle the error message can be improved
+- Adding more breakpoint so that the design more responsive to more resolution
 
 ### Useful resources
 
