@@ -409,7 +409,7 @@ body {
   gap: 2rem;
   border-radius: 10px;
   background-color: hsl(257, 27%, 26%);
-  background-image: url("/images/bg-shorten-mobile.svg");
+  background-image: url("../images/bg-shorten-mobile.svg");
   background-repeat: no-repeat;
   background-size: auto;
   background-position: top right;
@@ -419,7 +419,7 @@ body {
     flex-direction: row;
     padding: 6rem 6.4rem 2rem 6.4rem;
     align-items: start;
-    background-image: url("/images/bg-shorten-desktop.svg");
+    background-image: url("../images/bg-shorten-desktop.svg");
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -740,12 +740,12 @@ body {
 .cta {
   padding: 10rem 3rem;
   background-color: hsl(257, 27%, 26%);
-  background-image: url("/images/bg-boost-mobile.svg");
+  background-image: url("../images/bg-boost-mobile.svg");
   background-repeat: no-repeat;
 }
 @media (min-width: 64em) {
   .cta {
-    background-image: url("/images/bg-boost-desktop.svg");
+    background-image: url("../images/bg-boost-desktop.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

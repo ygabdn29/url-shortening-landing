@@ -58,11 +58,9 @@ Users should be able to:
 
 ### Useful resources
 
-- [MDN](https://www.example.com)
-- [StackOverflow](https://www.example.com)
+- [MDN](https://developer.mozilla.org/en-US/)
+- [StackOverflow](https://stackoverflow.com/)
 
 ## Author
 
 - Yoga Budiman
-
-## Acknowledgments
