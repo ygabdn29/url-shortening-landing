@@ -1,5 +1,5 @@
 @use "sass:math";
-$desktop: 1440px;
+$desktop: 1024px;
 
 // calculating font size
 @function calc-font-size($px) {

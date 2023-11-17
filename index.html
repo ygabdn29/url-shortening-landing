@@ -12,7 +12,7 @@
       href="./images/favicon-32x32.png"
     />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap"
@@ -26,7 +26,7 @@
     <script
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
+    ></script> -->
 
     <link rel="stylesheet" href="./css/main.css" />
 
@@ -92,14 +92,26 @@
 
         <div class="shortly-form">
           <div class="shortly-form__container">
-            <form action="" class="shortly-form__input-form">
-              <input
-                type="url"
-                name="url-input"
-                id="url-input"
-                class="shortly-form__url-input"
-                placeholder="Shorten a link here..."
-              />
+            <form
+              action=""
+              class="shortly-form__input-form"
+              crossorigin="anonymous"
+            >
+              <div class="shortly-form__input-container">
+                <input
+                  type="url"
+                  name="url-input"
+                  id="url-input"
+                  class="shortly-form__url-input"
+                  placeholder="Shorten a link here..."
+                />
+
+                <label
+                  for="url-input"
+                  class="shortly-form__label-input-error shortly-form__label-input-error--hidden"
+                  ><i>Please add link</i></label
+                >
+              </div>
 
               <button class="shortly-form__submit-btn">Shorten It!</button>
             </form>
@@ -107,7 +119,10 @@
         </div>
       </section>
 
-      <section class="shorten-url shorten-url--hidden"></section>
+      <section
+        class="shorten-url shorten-url--hidden"
+        id="shorten-url"
+      ></section>
 
       <section class="feature">
         <div class="feature__container">
@@ -121,8 +136,10 @@
           </div>
 
           <div class="feature__description">
-            <div class="feature__text-box">
-              <div class="feature__illustration-container">
+            <div class="feature__text-box feature__text-box--brand">
+              <div
+                class="feature__illustration-container feature__illustration-container--brand"
+              >
                 <img
                   src="./images/icon-brand-recognition.svg"
                   alt="Feature Illustration"
@@ -140,7 +157,9 @@
             </div>
 
             <div class="feature__text-box">
-              <div class="feature__illustration-container">
+              <div
+                class="feature__illustration-container feature__illustration-container--detailed"
+              >
                 <img
                   src="./images/icon-detailed-records.svg"
                   alt="Feature illustration"
@@ -157,8 +176,10 @@
               </p>
             </div>
 
-            <div class="feature__text-box">
-              <div class="feature__illustration-container">
+            <div class="feature__text-box feature__text-box--fully">
+              <div
+                class="feature__illustration-container feature__illustration-container--fully"
+              >
                 <img
                   src="./images/icon-fully-customizable.svg"
                   alt="Feature Illustration"
@@ -173,6 +194,8 @@
                 customizable links, supercharging audience engagement.
               </p>
             </div>
+
+            <div class="feature__lines" />
           </div>
         </div>
       </section>

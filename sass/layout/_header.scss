@@ -76,10 +76,16 @@
     &-link:visited {
       text-decoration: none;
       color: white;
+      transition: 0.2s all ease-in;
 
       @include mixins.responsive(mixins.$desktop) {
         color: variables.$gray;
       }
+    }
+
+    &-link:hover,
+    &-link:active {
+      color: variables.$dark-violet;
     }
 
     &--active {
@@ -154,6 +160,10 @@
         @include mixins.responsive(mixins.$desktop) {
           color: white;
         }
+      }
+
+      &:hover {
+        background-color: rgba(41, 207, 207, 0.5);
       }
     }
   }

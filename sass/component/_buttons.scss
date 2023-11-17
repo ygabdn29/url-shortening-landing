@@ -13,10 +13,16 @@
 
     color: white;
     background-color: variables.$cyan;
+    transition: 0.2s all ease-in;
 
     @include mixins.responsive(mixins.$desktop) {
       padding: 1.2rem 4.8rem;
       font-size: 1.8rem;
+    }
+
+    &:hover,
+    &:active {
+      background-color: rgb(0, 227, 227);
     }
   }
 }

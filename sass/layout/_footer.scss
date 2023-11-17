@@ -77,6 +77,13 @@
       text-decoration: none;
       color: variables.$gray;
       font-size: 1.8rem;
+
+      transition: all 0.2s ease-in;
+    }
+
+    &:hover,
+    &:active {
+      color: variables.$cyan;
     }
   }
 
@@ -97,6 +104,7 @@
       font-size: 4rem;
       color: white;
       cursor: pointer;
+      transition: 0.2s all ease-in;
 
       @include mixins.responsive(mixins.$desktop) {
         font-size: 3.2rem;
