@@ -109,6 +109,10 @@
       @include mixins.responsive(mixins.$desktop) {
         font-size: 3.2rem;
       }
+
+      &:hover {
+        color: variables.$cyan;
+      }
     }
   }
 }

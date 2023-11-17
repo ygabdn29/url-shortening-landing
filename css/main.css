@@ -314,6 +314,9 @@ body {
     font-size: 3.2rem;
   }
 }
+.footer__social-icon-logo:hover {
+  color: hsl(180, 66%, 49%);
+}
 
 .hero {
   padding-bottom: 20rem;
