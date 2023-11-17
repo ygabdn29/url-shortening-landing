@@ -31,7 +31,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./ss/desktop-design.png)
+![](./ss/desktop-active-states.png)
+![](./ss/mobile-design.png)
+![](./ss/mobile-navigation.png)
+![](./ss/mobile-active-states.png)
 
 ### Links
 
@@ -62,5 +66,3 @@ Users should be able to:
 - Yoga Budiman
 
 ## Acknowledgments
-
-s
