@@ -93,16 +93,17 @@ shortenUrlSection.addEventListener("click", function (e) {
 
 getLocalStorage();
 
-async function getShortenUrl(url) {
-  const response = await fetch("https://cleanuri.com/api/v1/shorten", {
+function getShortenUrl(url) {
+  fetch("https://cleanuri.com/api/v1/shorten", {
     method: "POST",
     mode: "cors",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(url),
+  }).then(function (response) {
+    console.log(response);
   });
-  return response.json();
 }
 
 getShortenUrl("https://youtube.com");
