@@ -56,6 +56,21 @@ function getLocalStorage() {
   );
 }
 
+async function getShortenUrl(url) {
+  fetch(`https://tinyurl.com/api-create.php?url=${url}`)
+    .then((response) => response.text())
+    .then((shortenUrl) => {
+      let shortenLink = {
+        originalUrl: url,
+        shortenUrl: shortenUrl,
+      };
+      return shortenLink;
+    })
+    .then((shortenLink) => {
+      renderShortenLink(shortenLink.originalUrl, shortenLink.shortenUrl);
+    });
+}
+
 shortlyForm.addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -68,14 +83,11 @@ shortlyForm.addEventListener("submit", function (e) {
   if (urlInput["url-input"]) {
     shortlyUrlInput.classList.remove("shortly-form__url-input--error");
     errorLabel.classList.add("shortly-form__label-input-error--hidden");
-    let shortenLink = {
-      originalUrl: urlInput["url-input"],
-      shortenUrl: "https://cleanuri.com/x9lZzk",
-    };
+
+    let shortenLink = getShortenUrl(urlInput["url-input"]);
     links.push(shortenLink);
 
     setLocalStorage(links);
-    renderShortenLink(shortenLink.originalUrl, shortenLink.shortenUrl);
   }
 });
 
@@ -92,18 +104,4 @@ shortenUrlSection.addEventListener("click", function (e) {
 });
 
 getLocalStorage();
-
-function getShortenUrl(url) {
-  fetch("https://cleanuri.com/api/v1/shorten", {
-    method: "POST",
-    mode: "cors",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(url),
-  }).then(function (response) {
-    console.log(response);
-  });
-}
-
-getShortenUrl("https://youtube.com");
+localStorage.clear();

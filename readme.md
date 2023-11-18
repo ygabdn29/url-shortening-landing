@@ -13,6 +13,7 @@ This is a solution to the [Shortly URL shortening API Challenge challenge on Fro
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
+- [Acknowledgements](#acknowledgements)
 
 ## Overview
 
@@ -52,7 +53,6 @@ Users should be able to:
 
 ### Continued development
 
-- I can't seem to integrate the API into the app, so I'm using a placeholder url that has been shortened. In the maybe I can try to integrate it.
 - I think the way I handle adding shortened link to the page and how I handle the error message can be improved
 - Adding more breakpoint so that the design more responsive to more resolution
 
@@ -64,3 +64,7 @@ Users should be able to:
 ## Author
 
 - Yoga Budiman
+
+### Acknowledgements
+
+- Thanks to Shaswat0707 from discord for helping me with the API problem I had before. Now the shorting URL functionality can be used.
