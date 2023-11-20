@@ -67,4 +67,4 @@ Users should be able to:
 
 ### Acknowledgements
 
-- Thanks to @github/Shaswat0707 for helping me with the API problem I had before. Now the shorting URL functionality can be used.
+- Thanks to [Shaswat0707](https://github.com/Shaswat0707) for helping me with the API problem I had before. Now the shorting URL functionality can be used.
